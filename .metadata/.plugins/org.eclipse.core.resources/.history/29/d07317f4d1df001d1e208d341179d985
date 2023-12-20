@@ -1,0 +1,62 @@
+package telas;
+
+import java.awt.HeadlessException;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+public class TelaDoador extends JFrame {
+	private JLabel jlNome, jlPeso, jlIdade;
+	private JTextField jtfNome, jtfPeso, jtfIdade;
+	private JButton jbCadastrar, jbMostrar;
+
+	public TelaDoador(String title) throws HeadlessException {
+		super(title);
+		setSize(400, 400);
+		setLayout(null);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		iniciarComponentes();
+		criarEventos();
+	}
+
+	private void iniciarComponentes() {
+		// TODO Auto-generated method stub
+		jlNome = new JLabel("Nome");
+		jtfNome = new JTextField();
+		
+		jlPeso = new JLabel("Peso");
+		jtfPeso = new JTextField();
+		
+		jlIdade = new JLabel("Idade");
+		jtfIdade = new JTextField();
+		
+		jbCadastrar = new JButton("Cadastrar");
+		jbMostrar = new JButton("Mostrar");
+		
+		
+		//adicionar
+		add(jlNome);
+		add(jtfNome);
+		
+		add(jlPeso);
+		add(jtfPeso);
+		
+		add(jlIdade);
+		add(jtfIdade);
+		
+		add(jbCadastrar);
+		add(jbMostrar);
+		
+		//dimensionamento
+		jlNome.setBounds(10, 20, 50, 20); //coluna, linha, comprimento e largura
+		jtfNome.setBounds(10, 40, 200, 20);
+	}
+
+	private void criarEventos() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,42 @@
+
+package classes;
+
+public class Doador {
+//atributo
+public String nome;
+public String genero;
+public float peso;
+public int idade;
+
+//construtor
+public Doador(String nome, String genero, float peso, int idade) {
+	super();
+	this.nome = nome;
+	this.genero = genero;
+	this.peso = peso;
+	this.idade = idade;
+}
+
+
+//mÈtodo
+public String mostrarDados() {
+	return "Nome: "+ this.nome 
+			+"\nPeso: " + this.peso + " KG"
+			+"\nIdade: "+ this.idade
+			+"\nGenero: " +this.genero;
+	
+}
+
+// verifica a idade do doador e determina se pode doar sangue e quanto
+public String mostrarQuantidadeSangue() {
+	if (this.idade >= 18) {
+		if (this.genero.equalsIgnoreCase("Masculino")) {// testa as letras n√£o importando ser mai√∫scula ou min√∫scula.
+			return "Doar 700 gramas";
+		} else {
+			return "Doar 400 gramas";
+		}
+	} else {
+		return " N„o pode doar sangue";
+	}
+}
+}
